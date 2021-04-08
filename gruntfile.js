@@ -125,6 +125,14 @@ module.exports = function(grunt) {
             src: [ 'build/dist/css/nanogallery2.min.css', 'build/dist/*.min.js' ]
           }
         }
+      },
+      copy: {
+        dist: {
+          expand: true,
+          cwd: 'build/dist',
+          src: '**',
+          dest: 'dist/',
+        }
       }
     });
       
@@ -138,12 +146,13 @@ module.exports = function(grunt) {
       'cssmin',
       'usebanner',
 /*      'header', */
-      'gh-pages'
+/*      'gh-pages'*/
       /* 'usebanner' */
       /* 'uglify:standardTarget',
       'concat:minimalDebug',
       'yuidoc',
       'copy:redirects' */
+        'copy:dist',
     ]);
 }
       

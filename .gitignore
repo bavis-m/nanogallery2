@@ -3,4 +3,7 @@ screenshots/
 .github/
 .gitignore
 .travis.yml
-gruntfile.js
+.grunt*
+*.swp
+*.swo
+build/
