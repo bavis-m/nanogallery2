@@ -1,4 +1,4 @@
-/* nanogallery2 - v3.0.5 - 2021-02-26 - https://nanogallery2.nanostudio.org */
+/* nanogallery2 - v3.0.5 - 2021-06-18 - https://nanogallery2.nanostudio.org */
 /*!
  * @preserve nanogallery2 - javascript photo / video gallery and lightbox
  * Homepage: http://nanogallery2.nanostudio.org
@@ -8455,6 +8455,7 @@
         // G.VOM.$mediaCurrent.children().eq(0).attr('src',G.emptyGif).attr('src', G.VOM.NGY2Item(0).responsiveURL());
         // LightboxDisplay(0, '');
         LightboxDisplay('');
+        LightboxDisplayFinalize('');
       }
     }
     
@@ -9721,7 +9722,7 @@
         
       // animate the image transition between 2 medias
         
-      if( G.CSStransformName == null  ) {
+      if( G.CSStransformName == null  || G.O.imageTransition == 'NONE' ) {
         // no CSS transform support -> no animation
         ViewerSetMediaVisibility(new_content_item, 1);
         ViewerSetMediaVisibility(current_content_item, 1);
